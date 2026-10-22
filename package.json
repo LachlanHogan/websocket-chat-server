@@ -1,0 +1,32 @@
+{
+  "name": "websocket-chat-server",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "exports": "./dist/index.mjs",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "npx pkgroll",
+    "start": "node dist/index.mjs",
+    "gen:db": "kysely-codegen --singularize --out-file ./src/generated/db.d.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/pg": "^8.23.1",
+    "@types/ws": "^8.18.2",
+    "dbmate": "^2.37.0",
+    "kysely-codegen": "^0.20.0",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.8",
+    "kysely": "^0.29.7",
+    "neverthrow": "^8.2.0",
+    "pg": "^8.23.1",
+    "ws": "^8.22.0"
+  }
+}
